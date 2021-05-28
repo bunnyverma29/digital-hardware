@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue May 11 02:31:25 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : decoder2x1_whole
+Top-level Entity Name : decoder2x1_whole
+Family : MAX V
+Device : 5M40ZM64C4
+Timing Models : Final
+Total logic elements : 4 / 40 ( 10 % )
+Total pins : 7 / 30 ( 23 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
