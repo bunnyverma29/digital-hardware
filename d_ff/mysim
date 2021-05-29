@@ -1,0 +1,95 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000028b860fbac0 .scope module, "test" "test" 2 2;
+ .timescale 0 0;
+v0000028b86112690_0 .var "clk", 0 0;
+v0000028b86112730_0 .var "din", 0 0;
+v0000028b861127d0_0 .net "q", 0 0, v0000028b860f8540_0;  1 drivers
+v0000028b86112870_0 .net "qbar", 0 0, L_0000028b86143510;  1 drivers
+v0000028b86112910_0 .var "reset", 0 0;
+S_0000028b860fbc50 .scope module, "dut1" "d_ff" 2 7, 3 1 0, S_0000028b860fbac0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "din";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /INPUT 1 "reset";
+    .port_info 3 /OUTPUT 1 "q";
+    .port_info 4 /OUTPUT 1 "qbar";
+v0000028b86148820_0 .net "clk", 0 0, v0000028b86112690_0;  1 drivers
+v0000028b86145d10_0 .net "din", 0 0, v0000028b86112730_0;  1 drivers
+v0000028b860f8540_0 .var "q", 0 0;
+v0000028b86112550_0 .net "qbar", 0 0, L_0000028b86143510;  alias, 1 drivers
+v0000028b861125f0_0 .net "reset", 0 0, v0000028b86112910_0;  1 drivers
+E_0000028b860fac40 .event posedge, v0000028b86148820_0;
+L_0000028b86143510 .reduce/nor v0000028b860f8540_0;
+    .scope S_0000028b860fbc50;
+T_0 ;
+    %wait E_0000028b860fac40;
+    %load/vec4 v0000028b861125f0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %load/vec4 v0000028b86145d10_0;
+    %assign/vec4 v0000028b860f8540_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000028b860f8540_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000028b860fbac0;
+T_1 ;
+T_1.0 ;
+    %load/vec4 v0000028b86112690_0;
+    %inv;
+    %store/vec4 v0000028b86112690_0, 0, 1;
+    %delay 5, 0;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_0000028b860fbac0;
+T_2 ;
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000 {0 0 0};
+    %vpi_call 2 16 "$dumpfile", "suuu.vcd" {0 0 0};
+    %end;
+    .thread T_2;
+    .scope S_0000028b860fbac0;
+T_3 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028b86112690_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028b86112910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028b86112730_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028b86112910_0, 0, 1;
+    %delay 3, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028b86112910_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028b86112730_0, 0, 1;
+    %delay 3, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028b86112730_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028b86112730_0, 0, 1;
+    %delay 15, 0;
+    %vpi_call 2 34 "$finish" {0 0 0};
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "q_tb.v";
+    "./d_ff.v";
