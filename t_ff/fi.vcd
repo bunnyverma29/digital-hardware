@@ -1,0 +1,60 @@
+$date
+	Sat May 29 23:04:42 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 1 ! qbar $end
+$var wire 1 " q $end
+$var reg 1 # clk $end
+$var reg 1 $ reset $end
+$var reg 1 % t $end
+$scope module dut $end
+$var wire 1 # clk $end
+$var wire 1 ! qbar $end
+$var wire 1 $ reset $end
+$var wire 1 % t $end
+$var reg 1 " q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x%
+1$
+0#
+x"
+x!
+$end
+#5
+1!
+0"
+1#
+#10
+0#
+#12
+1%
+0$
+#15
+1#
+#20
+0#
+#22
+1$
+#25
+1#
+#30
+0#
+#32
+0$
+#35
+1#
+#40
+0#
+#45
+1#
+#47
