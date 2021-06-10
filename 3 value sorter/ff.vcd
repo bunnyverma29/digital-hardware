@@ -1,0 +1,89 @@
+$date
+	Tue Jun 08 15:06:55 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test $end
+$var wire 8 ! Y [7:0] $end
+$var wire 8 " X [7:0] $end
+$var wire 8 # W [7:0] $end
+$var reg 8 $ A [7:0] $end
+$var reg 8 % B [7:0] $end
+$var reg 8 & C [7:0] $end
+$var reg 1 ' SORT $end
+$scope module dut $end
+$var wire 8 ( A [7:0] $end
+$var wire 8 ) B [7:0] $end
+$var wire 8 * C [7:0] $end
+$var wire 1 ' SORT $end
+$var reg 8 + W [7:0] $end
+$var reg 8 , X [7:0] $end
+$var reg 8 - Y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+0'
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#10
+b111 #
+b111 +
+b1010 "
+b1010 ,
+b1111 !
+b1111 -
+1'
+b111 &
+b111 *
+b1111 %
+b1111 )
+b1010 $
+b1010 (
+#20
+0'
+#30
+b101 #
+b101 +
+b1111 "
+b1111 ,
+b1000111 !
+b1000111 -
+1'
+b1000111 &
+b1000111 *
+b101 $
+b101 (
+#40
+0'
+#50
+b0 #
+b0 +
+b1 "
+b1 ,
+b110010 !
+b110010 -
+1'
+b110010 &
+b110010 *
+b1 %
+b1 )
+b0 $
+b0 (
+#60
