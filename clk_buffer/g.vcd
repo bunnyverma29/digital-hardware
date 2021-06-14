@@ -1,0 +1,46 @@
+$date
+	Fri Jun 11 12:00:50 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test $end
+$var wire 1 ! out $end
+$var reg 1 " in $end
+$var real 1 # f $end
+$var real 1 $ t1 $end
+$var real 1 % t2 $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+r0 %
+r0 $
+r0 #
+0"
+0!
+$end
+#25
+r25 $
+1!
+1"
+#50
+0!
+0"
+#75
+r20000000 #
+r75 %
+1!
+1"
+#100
+0!
+0"
+#125
+1!
+1"
+#150
+0!
+0"
